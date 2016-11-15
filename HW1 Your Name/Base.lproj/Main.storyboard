@@ -1,26 +1,584 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8yx-63-WRB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW1_Your_Name" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Poster" translatesAutoresizingMaskIntoConstraints="NO" id="7Sf-6N-mcd">
+                                <frame key="frameInset" minX="27" minY="85" width="360" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="180"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kiminonawa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4t-Jq-wrV">
+                                <frame key="frameInset" minX="153" minY="457" width="109" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQ3-rX-39g">
+                                <frame key="frameInset" minX="27" minY="485" width="360" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">《你的名字》（日語：君の名は。 -your name.-、英語：Your Name）是日本動畫家新海誠所執導、於2016年8月26日在日本公映的動畫電影。影片由田中將賀擔任人物設計、作畫導演為安藤雅司、劇中音樂則由搖滾樂團RADWIMPS負責製作，影星神木隆之介與上白石萌音分別為片中主角配音。
+本作是新海誠首次採用製作委員會方式的作品。該片上映後連霸日本數週票房冠軍，是目前唯一除吉卜力工作室作品以外超越百億日圓票房的日本動畫電影；此外，並獲得西班牙錫切斯影展最佳動畫長片獎等榮譽。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="kpa-bH-ALH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1889.8550724637682" y="-282.06521739130437"/>
+        </scene>
+        <!--Character-->
+        <scene sceneID="5AA-ZX-h9x">
+            <objects>
+                <tableViewController id="v4H-81-vBp" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6hK-v9-gD9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="50G-9x-jya">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="TfW-VS-kD1" imageView="Zmo-wr-sQI" style="IBUITableViewCellStyleDefault" id="mLq-iq-sK1">
+                                        <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mLq-iq-sK1" id="O8A-jg-6qZ">
+                                            <frame key="frameInset" width="381" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="立花瀧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfW-VS-kD1">
+                                                    <frame key="frameInset" minX="74" width="305" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Taki" id="Zmo-wr-sQI">
+                                                    <frame key="frameInset" minX="15" width="44" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ePN-QS-9dy" kind="show" id="z0T-jF-3Ax"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="l9v-i7-gUV" imageView="pPF-yx-Ffl" style="IBUITableViewCellStyleDefault" id="DfE-tW-eb7">
+                                        <rect key="frame" x="0.0" y="108" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DfE-tW-eb7" id="FAf-ik-iCb">
+                                            <frame key="frameInset" width="381" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="宮水三葉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l9v-i7-gUV">
+                                                    <frame key="frameInset" minX="74" width="305" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Mizuha" id="pPF-yx-Ffl">
+                                                    <frame key="frameInset" minX="15" width="44" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="apM-wA-8zL" kind="show" id="TxK-If-TGs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="UJ3-3d-zyg" imageView="abi-Ey-pbQ" style="IBUITableViewCellStyleDefault" id="U7U-9N-KxF">
+                                        <rect key="frame" x="0.0" y="152" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U7U-9N-KxF" id="b2E-Gr-Dm7">
+                                            <frame key="frameInset" width="381" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="奧寺美紀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UJ3-3d-zyg">
+                                                    <frame key="frameInset" minX="74" width="305" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Senpai" id="abi-Ey-pbQ">
+                                                    <frame key="frameInset" minX="15" width="44" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="IWU-pD-2Hs" kind="show" id="9iy-rI-fQo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="9WX-4X-BZL" imageView="Lrv-HQ-4gk" style="IBUITableViewCellStyleDefault" id="cJ9-uv-Eul">
+                                        <rect key="frame" x="0.0" y="196" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cJ9-uv-Eul" id="sk7-Nl-P4p">
+                                            <frame key="frameInset" width="381" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="勅使河原克彦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9WX-4X-BZL">
+                                                    <frame key="frameInset" minX="74" width="305" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Katsuhiko" id="Lrv-HQ-4gk">
+                                                    <frame key="frameInset" minX="15" width="44" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hov-mF-kzQ" kind="show" id="JUL-sq-R7P"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="BZg-De-J4n" imageView="MpO-3R-IJ6" style="IBUITableViewCellStyleDefault" id="HmK-gL-Ial">
+                                        <rect key="frame" x="0.0" y="240" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HmK-gL-Ial" id="dhR-ZP-WfF">
+                                            <frame key="frameInset" width="381" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="名取早耶香" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BZg-De-J4n">
+                                                    <frame key="frameInset" minX="74" width="305" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Sayaka" id="MpO-3R-IJ6">
+                                                    <frame key="frameInset" minX="15" width="44" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4Bw-CR-crF" kind="show" id="JW3-Rk-Q7M"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="gjV-Ms-5Rn" imageView="mxw-hB-FiA" style="IBUITableViewCellStyleDefault" id="xcg-Gn-Y6o">
+                                        <rect key="frame" x="0.0" y="284" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xcg-Gn-Y6o" id="gkq-cd-6zp">
+                                            <frame key="frameInset" width="381" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="藤井司" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gjV-Ms-5Rn">
+                                                    <frame key="frameInset" minX="74" width="305" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Tsukasa" id="mxw-hB-FiA">
+                                                    <frame key="frameInset" minX="15" width="44" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zt3-Qo-8eB" kind="show" id="lJH-nj-lJp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="qJo-pj-QbP" imageView="znL-uq-KSo" style="IBUITableViewCellStyleDefault" id="SV2-My-jom">
+                                        <rect key="frame" x="0.0" y="328" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SV2-My-jom" id="gHB-lv-kF8">
+                                            <frame key="frameInset" width="381" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="高木真太" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qJo-pj-QbP">
+                                                    <frame key="frameInset" minX="74" width="305" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Shinta" id="znL-uq-KSo">
+                                                    <frame key="frameInset" minX="15" width="44" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="QGq-Sg-9Et" kind="show" id="amK-Bw-yUs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="v4H-81-vBp" id="NFQ-c6-t8D"/>
+                            <outlet property="delegate" destination="v4H-81-vBp" id="FDh-jI-9nq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Character" id="ZBe-cJ-PAD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Wu-Nz-gRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890" y="363"/>
+        </scene>
+        <!--立花瀧-->
+        <scene sceneID="lcG-QC-SEE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZG-7z-McY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ePN-QS-9dy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Zg-hS-NXQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Et-6L-fV1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bO3-qA-C4U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Taki" translatesAutoresizingMaskIntoConstraints="NO" id="WLq-2a-cSx">
+                                <frame key="frameInset" minX="143" minY="123" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="64"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uxd-Zc-0dT">
+                                <frame key="frameInset" minX="32" minY="298" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">本作品男主角。2016年時是17歲，生活在東京市中心的男子高中生。經常在放學後在義大利餐館打工，與同事同樣對打工學姊奧寺暗懷好感。
+私下擅長繪畫，對建築和美術有興趣。
+在睡夢中不經意地與（2013年，三年前）宮水三葉交換身體後互相了解，最後則喜歡上了三葉。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="立花瀧" id="rMv-Zd-kV3"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2596" y="363"/>
+        </scene>
+        <!--Character-->
+        <scene sceneID="2om-jK-Y14">
+            <objects>
+                <navigationController id="P8o-HU-4Go" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Character" image="Character" id="hyA-7v-K3E"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Ew-KA-1zu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="v4H-81-vBp" kind="relationship" relationship="rootViewController" id="G9T-5B-w5R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdk-9N-65v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016" y="363"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="YHi-BN-b2E">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8yx-63-WRB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bEP-sv-NgF">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KbJ-cm-WG5" kind="relationship" relationship="viewControllers" id="l2V-ep-Suj"/>
+                        <segue destination="P8o-HU-4Go" kind="relationship" relationship="viewControllers" id="HZL-pb-uzi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxU-eN-ied" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104" y="446"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="slH-91-qUs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KbJ-cm-WG5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeTabIcon" id="U7E-eM-IzF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5u7-Kn-Z60">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K2i-QI-2yD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dki-Tw-50Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016" y="-282"/>
+        </scene>
+        <!--宮水三葉-->
+        <scene sceneID="0pg-aa-sdM">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q75-n6-cmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="apM-wA-8zL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HeD-TS-QdD"/>
+                        <viewControllerLayoutGuide type="bottom" id="n5G-x1-lKd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YsI-hd-VBu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mizuha" translatesAutoresizingMaskIntoConstraints="NO" id="sr3-Uj-QwY">
+                                <frame key="frameInset" minX="143" minY="123" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="64"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VH2-jg-Oam">
+                                <frame key="frameInset" minX="32" minY="298" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">本作品女主角。2013年時是17歲，住在深山鄉間小鎮「糸守鎮」的女高中生，跟還是小學生的妹妹一起當巫女，與祖母共同生活，身為鎮長的父親則離家在外。
+性格直率，對家族神社和父親的選舉活動等事情感到反感。和朋友們對這狹小的城鎮嘆息，憧憬著東京的華麗生活。
+後來在睡夢中不經意地與（2016年，三年後）立花瀧交換身體，體驗了一番東京大都市生活。在交換期間與男主互相了解、認識，最終與瀧互相產生愛慕。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="宮水三葉" id="xFH-Ue-avq"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3293" y="363"/>
+        </scene>
+        <!--奧寺美紀-->
+        <scene sceneID="ORp-Py-c8T">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iek-vZ-QJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="IWU-pD-2Hs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sSh-Fw-QGY"/>
+                        <viewControllerLayoutGuide type="bottom" id="8fv-zX-nrY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="niC-1f-WNU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Senpai" translatesAutoresizingMaskIntoConstraints="NO" id="AQc-lz-k96">
+                                <frame key="frameInset" minX="143" minY="123" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="64"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qZD-iX-mtS">
+                                <frame key="frameInset" minX="32" minY="298" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">瀧的打工學姊。打扮漂亮的女大學生，包括瀧在內的男性們的憧憬。
+發覺瀧的改變，因此曾經對瀧抱持好感。也察覺到瀧開始在意的不是自己。
+在故事尾聲中因為工作關係找瀧出來敘舊，並已有結婚對象，期許彼此都能夠幸福。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="奧寺美紀" id="bVC-nr-jwz"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="4012" y="363"/>
+        </scene>
+        <!--勅使河原克彥-->
+        <scene sceneID="G9I-Xt-l80">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udg-C9-Vgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="hov-mF-kzQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hdc-Tp-Myq"/>
+                        <viewControllerLayoutGuide type="bottom" id="EZz-lv-kVb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MEZ-kU-Yur">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Katsuhiko" translatesAutoresizingMaskIntoConstraints="NO" id="azO-eT-YWS">
+                                <frame key="frameInset" minX="143" minY="123" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="64"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="三葉的同學，暱稱「勅使」（テッシー）。喜歡神祕學說，隱性的機械宅。對當地從事建築業的父親抱著複雜的心情。對三葉的事情很在意，2021年與名取早耶香結婚。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Ki-QN-7Qk">
+                                <frame key="frameInset" minX="32" minY="298" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="勅使河原克彥" id="Kl9-Yl-4qv"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="4697" y="363"/>
+        </scene>
+        <!--名取早耶香-->
+        <scene sceneID="Y1C-sZ-1Lr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPp-nH-T75" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="4Bw-CR-crF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l2K-Yv-j1Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="fdq-2A-uxy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wGf-gf-Baw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sayaka" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-Yh-aZn">
+                                <frame key="frameInset" minX="143" minY="123" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="64"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="三葉的同學，暱稱「早耶」（サヤちん）。青梅竹馬般的好友。文靜且有常識。對敕使河原有好感。姊姊在市政廳擔當廣播，2021年與勅使河原克彥結婚。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fI7-um-PdL">
+                                <frame key="frameInset" minX="32" minY="298" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="名取早耶香" id="gsp-pD-1Fr"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="5396" y="363"/>
+        </scene>
+        <!--藤井司-->
+        <scene sceneID="lwF-aq-UMe">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hU-Z2-ory" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="zt3-Qo-8eB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XKi-Nz-kdF"/>
+                        <viewControllerLayoutGuide type="bottom" id="PF0-4N-DEz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AdL-83-O36">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tsukasa" translatesAutoresizingMaskIntoConstraints="NO" id="Kn5-aL-kml">
+                                <frame key="frameInset" minX="143" minY="123" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="64"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="瀧的同學。看上去很冷靜卻意外的有喜歡照顧人的一面，和瀧一樣對建築有興趣。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e3f-Gt-HGU">
+                                <frame key="frameInset" minX="32" minY="298" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="藤井司" id="djO-Pg-KMx"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="6114" y="363"/>
+        </scene>
+        <!--高木真太-->
+        <scene sceneID="OnQ-oz-swC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MhN-gx-ZwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="QGq-Sg-9Et" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FEj-ny-ryt"/>
+                        <viewControllerLayoutGuide type="bottom" id="EID-BQ-YgD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yII-MK-g32">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shinta" translatesAutoresizingMaskIntoConstraints="NO" id="2ca-Ef-97c">
+                                <frame key="frameInset" minX="143" minY="123" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="64"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="瀧的同學。大塊頭卻有清爽的性格。常與瀧和司一同在下課後到咖啡店去。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="orq-hG-q2P">
+                                <frame key="frameInset" minX="32" minY="298" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="高木真太" id="gUm-ti-3XD"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="6822" y="363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Character" width="29" height="30"/>
+        <image name="HomeTabIcon" width="30" height="30"/>
+        <image name="Katsuhiko" width="93" height="93"/>
+        <image name="Mizuha" width="133" height="133"/>
+        <image name="Poster" width="426" height="603"/>
+        <image name="Sayaka" width="74" height="74"/>
+        <image name="Senpai" width="116" height="116"/>
+        <image name="Shinta" width="100" height="100"/>
+        <image name="Taki" width="133" height="133"/>
+        <image name="Tsukasa" width="100" height="100"/>
+    </resources>
 </document>
